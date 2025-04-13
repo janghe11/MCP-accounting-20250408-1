@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{layout/default :: layout(${title}, ~{::section})}">
+<head>
+    <title>회계 기초</title>
+</head>
+<body>
+    <section>
+        <h2>회계 기초</h2>
+        <p class="lead" th:text="${content}">회계의 기본 원칙과 개념에 대해 알아봅니다.</p>
+        
+        <div class="card mb-4">
+            <div class="card-header">
+                <h3>회계의 기본 개념</h3>
+            </div>
+            <div class="card-body">
+                <h4>회계란 무엇인가?</h4>
+                <p>회계(Accounting)는 기업의 재무 활동을 기록, 요약, 분석하고 보고하는 과정입니다. 회계는 기업 내부 및 외부 이해관계자들이 경제적 의사결정을 내릴 수 있도록 재무 정보를 제공합니다.</p>
+                
+                <h4>회계의 목적</h4>
+                <ul>
+                    <li>기업의 재무 상태와 성과에 대한 정보 제공</li>
+                    <li>경영자, 투자자, 채권자 등 이해관계자의 의사결정 지원</li>
+                    <li>자원의 효율적 배분 촉진</li>
+                    <li>기업의 책임과 투명성 확보</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="card mb-4">
+            <div class="card-header">
+                <h3>회계의 기본 원칙</h3>
+            </div>
+            <div class="card-body">
+                <h4>복식부기 원리</h4>
+                <p>모든 거래는 최소 두 개의 계정에 동일한 금액으로 기록됩니다. 차변(Debit)과 대변(Credit)의 합계는 항상 일치해야 합니다.</p>
+                
+                <div class="alert alert-info">
+                    <strong>복식부기의 핵심 공식:</strong> 자산 = 부채 + 자본
+                </div>
+                
+                <h4>계정의 분류</h4>
+                <ul>
+                    <li><strong>자산(Assets):</strong> 기업이 보유하고 있는 경제적 자원</li>
+                    <li><strong>부채(Liabilities):</strong> 기업이 외부에 대해 갚아야 할 의무</li>
+                    <li><strong>자본(Equity):</strong> 자산에서 부채를 뺀 순자산 가치</li>
+                    <li><strong>수익(Revenue):</strong> 영업활동으로 인한 자산의 증가</li>
+                    <li><strong>비용(Expenses):</strong> 수익을 얻기 위해 소비된 경제적 자원</li>
+                </ul>
+                
+                <h4>거래의 기본 법칙</h4>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>계정 유형</th>
+                            <th>차변(Debit)이 의미하는 것</th>
+                            <th>대변(Credit)이 의미하는 것</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>자산</td>
+                            <td>증가</td>
+                            <td>감소</td>
+                        </tr>
+                        <tr>
+                            <td>부채</td>
+                            <td>감소</td>
+                            <td>증가</td>
+                        </tr>
+                        <tr>
+                            <td>자본</td>
+                            <td>감소</td>
+                            <td>증가</td>
+                        </tr>
+                        <tr>
+                            <td>수익</td>
+                            <td>감소</td>
+                            <td>증가</td>
+                        </tr>
+                        <tr>
+                            <td>비용</td>
+                            <td>증가</td>
+                            <td>감소</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <h3>회계 순환과정</h3>
+            </div>
+            <div class="card-body">
+                <ol>
+                    <li><strong>거래의 발생과 분석:</strong> 경제적 사건의 식별 및 분석</li>
+                    <li><strong>분개:</strong> 거래를 차변과 대변으로 기록</li>
+                    <li><strong>총계정원장:</strong> 분개된 거래를 계정별로 분류하여 합산</li>
+                    <li><strong>시산표:</strong> 차변과 대변의 합계가 일치하는지 확인</li>
+                    <li><strong>조정분개:</strong> 발생주의에 따른 수익과 비용의 인식</li>
+                    <li><strong>조정후 시산표:</strong> 조정분개 후 차변과 대변의 일치 확인</li>
+                    <li><strong>재무제표 작성:</strong> 대차대조표, 손익계산서, 현금흐름표 등 작성</li>
+                    <li><strong>마감분개:</strong> 수익과 비용 계정을 이익잉여금으로 대체</li>
+                    <li><strong>후속 시산표:</strong> 장부의 마감 확인</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
